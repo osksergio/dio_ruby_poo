@@ -3,6 +3,7 @@ class Pessoa
     puts "Método 1"
   end
 
+  # todos métodos abaixo do private será criados como privados
   private
 
   def m2
@@ -16,4 +17,5 @@ end
 
 pessoa_1 = Pessoa.new
 pessoa_1.m1
+# chamando o método 2, este código irá conter um erro, pois este método é priviado.
 pessoa_1.m2
