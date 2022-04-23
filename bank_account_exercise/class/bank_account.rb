@@ -4,16 +4,16 @@ class ContaBancaria
     @valor        = valor_inicial
   end
 
-  def debitar(conta, valor)
-
-  end
+  #def debitar(conta, valor)
+  #
+  #end
 
   def transferir(outra_conta, valor)
     if saldo >= valor
       debitar(valor)
       outra_conta.depositar(valor)
     else
-      puts "Não foi possível transferir! Saldo insuciente."
+      raise "Não foi possível transferir! Saldo insuciente."
     end
   end
 
